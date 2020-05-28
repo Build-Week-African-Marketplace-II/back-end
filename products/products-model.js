@@ -26,9 +26,12 @@ function find() {
   }
 
   function add(product) {
-    const [id] = db("products").insert(product, "id");
-  
-    return findById(id);
+    return db("products")
+    .insert(product, "id")  
+    .then(ids => {
+      const [id] = ids;
+      return findById(id);
+    });
   }
   
   function findById(id) {
