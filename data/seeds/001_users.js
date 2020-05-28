@@ -1,5 +1,5 @@
 exports.seed = async function(knex) {
-	await knex("users").truncate()
+	await knex("users").del()
 	await knex("users").insert([
 		{ username: "james", password: "abc123", email: 'lambda@test.com'},
 		{ username: "mike", password: "wasd54", email: 'lambda1@testing.com' },
