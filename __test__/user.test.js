@@ -14,7 +14,7 @@ describe('register', () => {
     it("register success", async () => {
         const res = await supertest(server).post('/api/auth/register')
         .send({
-            username: 'john1',
+            username: 'john12',
             password: 'test',
             email: 'lambda4@testing.com'
         })
