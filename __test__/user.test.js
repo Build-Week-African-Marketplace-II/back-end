@@ -14,7 +14,7 @@ describe('register', () => {
     it("register success", async () => {
         const res = await supertest(server).post('/api/auth/register')
         .send({
-            username: 'john1',
+            username: 'john2',
             password: 'test',
             email: 'lambda4@testing.com'
         })
@@ -34,7 +34,7 @@ describe('login', () => {
     it('login success', async () => {
         const res = await supertest(server).post('/api/auth/login')
         .send({
-            username: 'john1',
+            username: 'john2',
             password: 'test',
             email: 'lambda4@testing.com'
     })
@@ -44,7 +44,7 @@ describe('login', () => {
     it('login fail', async () => {
         const res = await supertest(server).post('/api/auth/login')
         .send({
-            username: 'john1',
+            username: 'john2',
             password: 't3st',
             email: 'lambda4@testing.com'
         })
